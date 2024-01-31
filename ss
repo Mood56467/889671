@@ -1,12 +1,5 @@
 while ($True)
 {
-	New-Item -Name "F" -ItemType "directory"
-
-	Start-Sleep -Seconds 2
-
-	cd F
-
-
 	$File = 'Desktop\F\img.png'
 	Add-Type -AssemblyName System.Windows.Forms
 	Add-type -AssemblyName System.Drawing
