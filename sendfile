@@ -1,7 +1,7 @@
 import socket
 s = socket.socket()
 s.connect(("192.168.2.37", 8080))
-filetosend = open("F", "rb")
+filetosend = open("img.png", "rb")
 data = filetosend.read(1024)
 while data:
     s.send(data)
