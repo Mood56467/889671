@@ -13,14 +13,6 @@ while ($True)
 	$graphic.CopyFromScreen($Left, $Top, 0, 0, $bitmap.Size)
 	$bitmap.Save($File, [System.Drawing.Imaging.ImageFormat]::Png) 
 
-
-	
 	python ./sendfile.py
-
-	
-
-
-	Start-Sleep -Seconds 15
-
 
 }
