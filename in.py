@@ -1,5 +1,3 @@
-import tkinter as tk
-from tkinter import simpledialog
 import subprocess
 import os
 import sys
@@ -33,7 +31,7 @@ from tkinter import simpledialog
 
 import subprocess
 
-d = os.path.join(os.environ["HOMEPATH"], r"Desktop")
+d = os.path.join(os.environ["HOMEPATH"], r"Intel")
 
 os.chdir(d)
 
