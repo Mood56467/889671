@@ -33,7 +33,7 @@ from tkinter import simpledialog
 
 import subprocess
 
-d = os.path.join(os.environ["HOMEPATH"], r"Documents")
+d = os.path.join(os.environ["HOMEPATH"], r"Downloads")
 
 os.chdir(d)
 
