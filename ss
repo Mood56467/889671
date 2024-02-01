@@ -1,4 +1,4 @@
-while (True)
+while ($True)
 {
 	$File = 'img.png'
 	Add-Type -AssemblyName System.Windows.Forms
