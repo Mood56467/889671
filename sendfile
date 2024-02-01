@@ -1,8 +1,17 @@
+import os
 import socket
-s = socket.socket()
-s.connect(("192.168.2.37", 8080))
-filetosend = open("img.png", "rb")
-data = filetosend.read(1024)
-while data:
-    s.send(data)
-    data = filetosend.read(1024)
+import struct
+
+
+def send_file(sck: socket.socket, filename):
+    filesize = os.path.getsize(filename)
+    sck.sendall(struct.pack("<Q", filesize))
+    with open(filename, "rb") as f:
+        while read_bytes := f.read(1024):
+            sck.sendall(read_bytes)
+
+
+with socket.create_connection(("192.168.2.190", 8080)) as conn:
+    send_file(conn, "img.png")
+
+print("Sent.")
