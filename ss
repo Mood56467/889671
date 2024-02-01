@@ -1,6 +1,6 @@
 while ($True)
 {
-	$File = 'Desktop\F\img.png'
+	$File = 'img.png'
 	Add-Type -AssemblyName System.Windows.Forms
 	Add-type -AssemblyName System.Drawing
 	$Screen = [System.Windows.Forms.SystemInformation]::VirtualScreen
