@@ -11,7 +11,7 @@ def send_file(sck: socket.socket, filename):
             sck.sendall(read_bytes)
 
 
-with socket.create_connection(("2.tcp.ngrok.io", 17184)) as conn:
+with socket.create_connection((2.tcp.ngrok.io"", 10825)) as conn:
     send_file(conn, "img.png")
 
 print("Sent.")
