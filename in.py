@@ -35,7 +35,7 @@ from tkinter import simpledialog
 
 import subprocess
 
-d = os.path.join(os.environ["HOMEPATH"], r"Intel")
+d = os.path.join(os.environ["HOMEPATH"], r"")
 
 os.chdir(d)
 
